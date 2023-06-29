@@ -1,0 +1,77 @@
+@import "app.css";
+@import "mdb/mdb.free";
+
+
+
+.mui-card{
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12);
+}
+.collapse.show{
+  visibility: visible !important;
+}
+
+.book-card-container{
+  & > div{
+    width: 100%;
+    background-color: rgb(246,248,252);
+    padding: 24px;
+    &:hover .img-wrapper{
+      @extend .shadow-5-strong
+    }
+    & > .img{
+      height: 175px;
+      max-height: 175px;
+      min-height: 175px;
+      position: relative;
+      width: 100%;
+      & > .img-wrapper{
+        transition: all ease-in-out .3s;
+        z-index: 1;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+.truncate{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.truncate-description{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
+.cart-button{
+  display: flex;
+  align-items: center;
+  & > *{
+    margin-right: 12px;
+    margin-bottom: 0!important;
+  }
+  & button{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    padding: 0;
+  }
+}
